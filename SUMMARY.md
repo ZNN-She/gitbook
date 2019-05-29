@@ -17,3 +17,5 @@
 * [树菜单](book/树菜单.md)
 * [css箭头](book/css箭头/css箭头.md)
 * [轮播插件](book/轮播插件/轮播插件.md)
+* [linux常用命令](book/linux常用命令.md)
+* [pm2配置及常用命令](book/pm2配置及常用命令.md)
