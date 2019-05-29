@@ -1,0 +1,72 @@
+#####原始类型: 五种简单数据类型 Undefined Boolean Number String Null 一种复杂数据类型 Object(Null认为是空对象)
+    javascript不支持任何创建自定义类型的机制，而最终值都将是六中数据类型之一
+
+#####内置对象(引用类型): Object Function Array String Boolean Number Date RegExp Error EvalError RangeError ReferenceError SyntaxError TypeError URIError
+
+#####区分类型: typeof/instanceof/construcor/Object.prototype.toString.call()
+	typeof : 返回数据类型（undefiend boolean string number object function）
+
+```
+null == undefined //true
+null === undefined //false
+null == 0 //false
+null == "" //false
+undefined == 0 //false
+undefined == "" //false
+0 == "" //true
+0 === "" //false
+```
+
+```
+var fn = function(argument) {}
+var number = 2312;
+var nullTest = null;
+
+console.log(typeof "sdd"); //string
+console.log(typeof number); //number
+console.log(typeof {}); //object
+console.log(typeof []); //object
+console.log(typeof null); //object
+console.log(typeof undefined); //undefined
+console.log(typeof true); //boolean
+console.log(typeof /ewwr/); //object
+console.log(typeof fn); //function
+
+console.log("" instanceof String); //false
+console.log({} instanceof Object); //true
+console.log(number instanceof Number); //false
+console.log([] instanceof Array); //true
+console.log(true instanceof Boolean); //false
+console.log(/werew/ instanceof RegExp); //true
+console.log(fn instanceof Function); //true
+
+console.log("".constructor === String); //true
+console.log(number.constructor === Number); //true
+console.log({}.constructor === Object); //true
+console.log([].constructor === Array); //true
+console.log(true.constructor === Boolean); //true
+console.log(/qew/.constructor === RegExp); //true
+console.log(fn.constructor === Function); //true 
+
+console.log(Object.prototype.toString.call("")); //[object String]
+console.log(Object.prototype.toString.call([])); //[object Array]
+console.log(Object.prototype.toString.call({})); //[object Object]
+console.log(Object.prototype.toString.call(1233)); //[object Number]
+console.log(Object.prototype.toString.call(true)); //[object Boolean]
+console.log(Object.prototype.toString.call(/we/)); //[object RegExp]
+console.log(Object.prototype.toString.call(null)); //[object Null]
+console.log(Object.prototype.toString.call(undefined)); //[object Undefined]
+console.log(Object.prototype.toString.call(fn)); //[object Function]
+
+console.log(Object.prototype.toString.call("") === "[object String]"); //true
+console.log(Object.prototype.toString.call([]) === "[object Array]"); //true
+console.log(Object.prototype.toString.call({}) === "[object Object]"); //true
+console.log(Object.prototype.toString.call(1233) === "[object Number]"); //true
+console.log(Object.prototype.toString.call(true) === "[object Boolean]"); //true
+console.log(Object.prototype.toString.call(/we/) === "[object RegExp]"); //true
+console.log(Object.prototype.toString.call(null) === "[object Null]"); //true
+console.log(Object.prototype.toString.call(undefined) === "[object Undefined]"); //true
+console.log(Object.prototype.toString.call(fn) === "[object Function]"); //true
+
+```
+    

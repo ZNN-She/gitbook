@@ -1,0 +1,45 @@
+<img src="./jiantou.png" width="100"></img>
+```
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>无标题文档</title>
+<style>
+body, *{margin:0; padding:0; box-sizing: border-box;}
+.jiantou{
+    border: solid;
+    border-width: 50px;
+    border-color: transparent;
+    border-top-color: #ddd;
+    width: 0;
+    height: 0;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.jiantou2{
+    border: 1px solid #ddd;
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: 30px;
+    position: absolute;
+}
+.jiantou2::before{
+    content: "";
+    border: solid;
+    border-width: 10px;
+    border-color: transparent;
+    border-bottom-color: #ddd;
+    position: absolute;
+    top: -20px;
+    left: 30px;
+}
+</style>
+</head>
+<body>
+<div class="jiantou"></div>
+<div class="jiantou2"></div>
+</body>
+</html>
+```

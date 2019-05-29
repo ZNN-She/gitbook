@@ -1,0 +1,39 @@
+```
+<div>
+	<label>
+		<input type="checkbox" value="" onclick="test()">
+		测试
+	</label>
+</div>
+<!-- Test()执行一次 -->
+
+<div>
+	<label  onclick="test()">
+		<input type="checkbox" value="">
+		测试
+	</label>
+</div>
+<!-- Test()执行两次次 -->
+
+<div>
+	<div  onclick="test()">
+		<input type="checkbox" value="">
+		测试
+	</div>
+</div>
+<!-- Test()执行一次 但是 checkbox的状态不该变-->
+
+<div>
+	<div>
+		<input type="checkbox" value="" onclick="test()">
+		测试
+	</div>
+</div>
+<!-- Test()执行一次 但是点击文字 不能触发事件 -->
+
+<script>
+	function test(event) {
+		 console.log(11);
+	}
+</script>
+```
