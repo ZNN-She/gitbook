@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>js数据类型和判断方法 · GitBook</title>
+        <title>linux常用命令 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="动态创建form表单下载.html" />
+    <link rel="next" href="pm2配置及常用命令.html" />
     
     
-    <link rel="prev" href="加减乘除.html" />
+    <link rel="prev" href="轮播插件/轮播插件.html" />
     
 
     </head>
@@ -232,7 +232,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.12" data-path="js数据类型和判断方法.html">
+        <li class="chapter " data-level="1.12" data-path="js数据类型和判断方法.html">
             
                 <a href="js数据类型和判断方法.html">
             
@@ -310,7 +310,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18" data-path="linux常用命令.html">
+        <li class="chapter active" data-level="1.18" data-path="linux常用命令.html">
             
                 <a href="linux常用命令.html">
             
@@ -379,7 +379,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >js数据类型和判断方法</a>
+        <a href=".." >linux常用命令</a>
     </h1>
 </div>
 
@@ -394,68 +394,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h5 id="&#x539F;&#x59CB;&#x7C7B;&#x578B;-&#x4E94;&#x79CD;&#x7B80;&#x5355;&#x6570;&#x636E;&#x7C7B;&#x578B;-undefined-boolean-number-string-null-&#x4E00;&#x79CD;&#x590D;&#x6742;&#x6570;&#x636E;&#x7C7B;&#x578B;-objectnull&#x8BA4;&#x4E3A;&#x662F;&#x7A7A;&#x5BF9;&#x8C61;">&#x539F;&#x59CB;&#x7C7B;&#x578B;: &#x4E94;&#x79CD;&#x7B80;&#x5355;&#x6570;&#x636E;&#x7C7B;&#x578B; Undefined Boolean Number String Null &#x4E00;&#x79CD;&#x590D;&#x6742;&#x6570;&#x636E;&#x7C7B;&#x578B; Object(Null&#x8BA4;&#x4E3A;&#x662F;&#x7A7A;&#x5BF9;&#x8C61;)</h5>
-<pre><code>javascript&#x4E0D;&#x652F;&#x6301;&#x4EFB;&#x4F55;&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x800C;&#x6700;&#x7EC8;&#x503C;&#x90FD;&#x5C06;&#x662F;&#x516D;&#x4E2D;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E4B;&#x4E00;
-</code></pre><h5 id="&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#x5F15;&#x7528;&#x7C7B;&#x578B;-object-function-array-string-boolean-number-date-regexp-error-evalerror-rangeerror-referenceerror-syntaxerror-typeerror-urierror">&#x5185;&#x7F6E;&#x5BF9;&#x8C61;(&#x5F15;&#x7528;&#x7C7B;&#x578B;): Object Function Array String Boolean Number Date RegExp Error EvalError RangeError ReferenceError SyntaxError TypeError URIError</h5>
-<h5 id="&#x533A;&#x5206;&#x7C7B;&#x578B;-typeofinstanceofconstrucorobjectprototypetostringcall">&#x533A;&#x5206;&#x7C7B;&#x578B;: typeof/instanceof/construcor/Object.prototype.toString.call()</h5>
-<pre><code>typeof : &#x8FD4;&#x56DE;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF08;undefiend boolean string number object function&#xFF09;
-</code></pre><pre><code>null == undefined //true
-null === undefined //false
-null == 0 //false
-null == &quot;&quot; //false
-undefined == 0 //false
-undefined == &quot;&quot; //false
-0 == &quot;&quot; //true
-0 === &quot;&quot; //false
-</code></pre><pre><code>var fn = function(argument) {}
-var number = 2312;
-var nullTest = null;
-
-console.log(typeof &quot;sdd&quot;); //string
-console.log(typeof number); //number
-console.log(typeof {}); //object
-console.log(typeof []); //object
-console.log(typeof null); //object
-console.log(typeof undefined); //undefined
-console.log(typeof true); //boolean
-console.log(typeof /ewwr/); //object
-console.log(typeof fn); //function
-
-console.log(&quot;&quot; instanceof String); //false
-console.log({} instanceof Object); //true
-console.log(number instanceof Number); //false
-console.log([] instanceof Array); //true
-console.log(true instanceof Boolean); //false
-console.log(/werew/ instanceof RegExp); //true
-console.log(fn instanceof Function); //true
-
-console.log(&quot;&quot;.constructor === String); //true
-console.log(number.constructor === Number); //true
-console.log({}.constructor === Object); //true
-console.log([].constructor === Array); //true
-console.log(true.constructor === Boolean); //true
-console.log(/qew/.constructor === RegExp); //true
-console.log(fn.constructor === Function); //true 
-
-console.log(Object.prototype.toString.call(&quot;&quot;)); //[object String]
-console.log(Object.prototype.toString.call([])); //[object Array]
-console.log(Object.prototype.toString.call({})); //[object Object]
-console.log(Object.prototype.toString.call(1233)); //[object Number]
-console.log(Object.prototype.toString.call(true)); //[object Boolean]
-console.log(Object.prototype.toString.call(/we/)); //[object RegExp]
-console.log(Object.prototype.toString.call(null)); //[object Null]
-console.log(Object.prototype.toString.call(undefined)); //[object Undefined]
-console.log(Object.prototype.toString.call(fn)); //[object Function]
-
-console.log(Object.prototype.toString.call(&quot;&quot;) === &quot;[object String]&quot;); //true
-console.log(Object.prototype.toString.call([]) === &quot;[object Array]&quot;); //true
-console.log(Object.prototype.toString.call({}) === &quot;[object Object]&quot;); //true
-console.log(Object.prototype.toString.call(1233) === &quot;[object Number]&quot;); //true
-console.log(Object.prototype.toString.call(true) === &quot;[object Boolean]&quot;); //true
-console.log(Object.prototype.toString.call(/we/) === &quot;[object RegExp]&quot;); //true
-console.log(Object.prototype.toString.call(null) === &quot;[object Null]&quot;); //true
-console.log(Object.prototype.toString.call(undefined) === &quot;[object Undefined]&quot;); //true
-console.log(Object.prototype.toString.call(fn) === &quot;[object Function]&quot;); //true
+                                <h4 id="linux&#x7AEF;&#x53E3;&#x53F7;&#x4E0E;pid&#x7684;&#x4E92;&#x76F8;&#x67E5;&#x8BE2;">linux&#x7AEF;&#x53E3;&#x53F7;&#x4E0E;PID&#x7684;&#x4E92;&#x76F8;&#x67E5;&#x8BE2;</h4>
+<pre><code>* &#x7531;&#x7AEF;&#x53E3;&#x53F7;&#x67E5;&#x8BE2;PID&#x53F7; sudo netstat -antup
+* &#x7528;PID&#x67E5;&#x8BE2;&#x7AEF;&#x53E3;&#x53F7; sudo netstat -antup|grep PID&#x53F7;
+* &#x7528;&#x8FDB;&#x7A0B;&#x540D;&#x67E5;&#x8BE2;PID&#x53F7; sudo ps -ef|grep &#x8FDB;&#x7A0B;
+* rm -ef &#x6587;&#x4EF6;&#x540D;/&#x6587;&#x4EF6;&#x540D; &#x5220;&#x9664;&#x6587;&#x4EF6;
+* mkdir &#x6587;&#x4EF6;&#x5939;&#x540D; &#x65B0;&#x5EFA;&#x6587;&#x4EF6;&#x5939;
+* vi &#x6587;&#x4EF6;&#x540D;  &#x65B0;&#x5EFA;&#x6587;&#x4EF6;
 </code></pre>
                                 
                                 </section>
@@ -483,12 +428,12 @@ console.log(Object.prototype.toString.call(fn) === &quot;[object Function]&quot;
 
             
                 
-                <a href="加减乘除.html" class="navigation navigation-prev " aria-label="Previous page: 加减乘除">
+                <a href="轮播插件/轮播插件.html" class="navigation navigation-prev " aria-label="Previous page: 轮播插件">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="动态创建form表单下载.html" class="navigation navigation-next " aria-label="Next page: 动态创建form表单下载">
+                <a href="pm2配置及常用命令.html" class="navigation navigation-next " aria-label="Next page: pm2配置及常用命令">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -499,7 +444,7 @@ console.log(Object.prototype.toString.call(fn) === &quot;[object Function]&quot;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"js数据类型和判断方法","level":"1.12","depth":1,"next":{"title":"动态创建form表单下载","level":"1.13","depth":1,"path":"book/动态创建form表单下载.md","ref":"book/动态创建form表单下载.md","articles":[]},"previous":{"title":"加减乘除","level":"1.11","depth":1,"path":"book/加减乘除.md","ref":"book/加减乘除.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/js数据类型和判断方法.md","mtime":"2019-05-28T06:45:10.865Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-30T09:18:35.862Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"linux常用命令","level":"1.18","depth":1,"next":{"title":"pm2配置及常用命令","level":"1.19","depth":1,"path":"book/pm2配置及常用命令.md","ref":"book/pm2配置及常用命令.md","articles":[]},"previous":{"title":"轮播插件","level":"1.17","depth":1,"path":"book/轮播插件/轮播插件.md","ref":"book/轮播插件/轮播插件.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/linux常用命令.md","mtime":"2019-05-29T10:35:41.420Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-30T09:18:35.862Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

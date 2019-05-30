@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>js数据类型和判断方法 · GitBook</title>
+        <title>pm2配置及常用命令 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="动态创建form表单下载.html" />
+    <link rel="next" href="遮罩引导/遮罩引导.html" />
     
     
-    <link rel="prev" href="加减乘除.html" />
+    <link rel="prev" href="linux常用命令.html" />
     
 
     </head>
@@ -232,7 +232,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.12" data-path="js数据类型和判断方法.html">
+        <li class="chapter " data-level="1.12" data-path="js数据类型和判断方法.html">
             
                 <a href="js数据类型和判断方法.html">
             
@@ -323,7 +323,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19" data-path="pm2配置及常用命令.html">
+        <li class="chapter active" data-level="1.19" data-path="pm2配置及常用命令.html">
             
                 <a href="pm2配置及常用命令.html">
             
@@ -379,7 +379,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >js数据类型和判断方法</a>
+        <a href=".." >pm2配置及常用命令</a>
     </h1>
 </div>
 
@@ -394,68 +394,103 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h5 id="&#x539F;&#x59CB;&#x7C7B;&#x578B;-&#x4E94;&#x79CD;&#x7B80;&#x5355;&#x6570;&#x636E;&#x7C7B;&#x578B;-undefined-boolean-number-string-null-&#x4E00;&#x79CD;&#x590D;&#x6742;&#x6570;&#x636E;&#x7C7B;&#x578B;-objectnull&#x8BA4;&#x4E3A;&#x662F;&#x7A7A;&#x5BF9;&#x8C61;">&#x539F;&#x59CB;&#x7C7B;&#x578B;: &#x4E94;&#x79CD;&#x7B80;&#x5355;&#x6570;&#x636E;&#x7C7B;&#x578B; Undefined Boolean Number String Null &#x4E00;&#x79CD;&#x590D;&#x6742;&#x6570;&#x636E;&#x7C7B;&#x578B; Object(Null&#x8BA4;&#x4E3A;&#x662F;&#x7A7A;&#x5BF9;&#x8C61;)</h5>
-<pre><code>javascript&#x4E0D;&#x652F;&#x6301;&#x4EFB;&#x4F55;&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x800C;&#x6700;&#x7EC8;&#x503C;&#x90FD;&#x5C06;&#x662F;&#x516D;&#x4E2D;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E4B;&#x4E00;
-</code></pre><h5 id="&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#x5F15;&#x7528;&#x7C7B;&#x578B;-object-function-array-string-boolean-number-date-regexp-error-evalerror-rangeerror-referenceerror-syntaxerror-typeerror-urierror">&#x5185;&#x7F6E;&#x5BF9;&#x8C61;(&#x5F15;&#x7528;&#x7C7B;&#x578B;): Object Function Array String Boolean Number Date RegExp Error EvalError RangeError ReferenceError SyntaxError TypeError URIError</h5>
-<h5 id="&#x533A;&#x5206;&#x7C7B;&#x578B;-typeofinstanceofconstrucorobjectprototypetostringcall">&#x533A;&#x5206;&#x7C7B;&#x578B;: typeof/instanceof/construcor/Object.prototype.toString.call()</h5>
-<pre><code>typeof : &#x8FD4;&#x56DE;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF08;undefiend boolean string number object function&#xFF09;
-</code></pre><pre><code>null == undefined //true
-null === undefined //false
-null == 0 //false
-null == &quot;&quot; //false
-undefined == 0 //false
-undefined == &quot;&quot; //false
-0 == &quot;&quot; //true
-0 === &quot;&quot; //false
-</code></pre><pre><code>var fn = function(argument) {}
-var number = 2312;
-var nullTest = null;
+                                <h4 id="&#x5E38;&#x7528;&#x547D;&#x4EE4;">&#x5E38;&#x7528;&#x547D;&#x4EE4;</h4>
+<pre><code>* pm2 start xxx.js --name &#x670D;&#x52A1;&#x540D;&#x5B57;  &#x4E0D;&#x5199;&#x670D;&#x52A1;&#x540D;&#x5B57;&#x4F1A;&#x6210;&#x6587;&#x4EF6;&#x540D;&#x5B57;
+* pm2 lsit &#x67E5;&#x770B;pm2&#x542F;&#x52A8;&#x7684;&#x6240;&#x6709;&#x7A0B;&#x5E8F;
+* pm2 stop name/id &#x505C;&#x6B62;&#x5BF9;&#x5E94;&#x7684;&#x8FDB;&#x7A0B; &#x53C2;&#x6570;&#x4E3A;&#x670D;&#x52A1;&#x7684;&#x540D;&#x5B57;&#x6216;&#x5219;id
+* pm2 stop all &#x505C;&#x6B62;&#x6240;&#x6709;&#x7684;&#x8FDB;&#x7A0B;
+* pm2 delete name/id &#x5220;&#x9664;&#x8FDB;&#x7A0B;
+* pm2 delete all &#x6740;&#x6B7B;&#x6240;&#x6709;&#x8FDB;&#x7A0B;
+* pm2 restart name/id/all &#x91CD;&#x542F;&#x6307;&#x5B9A;&#x8FDB;&#x7A0B;&#x3001;&#x5168;&#x90E8;&#x8FDB;&#x7A0B;
+</code></pre><h4 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
+<pre><code>module.exports = {
+  apps : [
+      {
+          name: &quot;gitbookWeb&quot;,
+          script: &quot;./app.js&quot;,
+          watch: true,
+          env: {
+              &quot;PORT&quot;: 3000,
+              &quot;NODE_ENV&quot;: &quot;development&quot;,
+              &quot;STATIC_PATH&quot;: &quot;./webapp&quot;,
+          },
+          env_production: {
+              &quot;PORT&quot;: 80,
+              &quot;NODE_ENV&quot;: &quot;production&quot;,
+              &quot;STATIC_PATH&quot;: &quot;../../../../../www/gitbook/_book&quot;,
+          }
+      },
+      {
+        &quot;name&quot;: &quot;mywork&quot;,
+        &quot;cwd&quot;: &quot;/srv/node-app/current&quot;,
+        &quot;script&quot;: &quot;bin/www&quot;,
+        &quot;log_date_format&quot;: &quot;YYYY-MM-DD HH:mm Z&quot;,
+        &quot;error_file&quot;: &quot;/var/log/node-app/node-app.stderr.log&quot;,
+        &quot;out_file&quot;: &quot;log/node-app.stdout.log&quot;,
+        &quot;pid_file&quot;: &quot;pids/node-geo-api.pid&quot;,
+        &quot;instances&quot;: 6,
+        &quot;min_uptime&quot;: &quot;200s&quot;,
+        &quot;max_restarts&quot;: 10,
+        &quot;max_memory_restart&quot;: &quot;1M&quot;,
+        &quot;cron_restart&quot;: &quot;1 0 * * *&quot;,
+        &quot;watch&quot;: false,
+        &quot;merge_logs&quot;: true,
+        &quot;exec_interpreter&quot;: &quot;node&quot;,
+        &quot;exec_mode&quot;: &quot;fork&quot;,
+        &quot;autorestart&quot;: false,
+        &quot;vizion&quot;: false
+      }
+  ]
+}
 
-console.log(typeof &quot;sdd&quot;); //string
-console.log(typeof number); //number
-console.log(typeof {}); //object
-console.log(typeof []); //object
-console.log(typeof null); //object
-console.log(typeof undefined); //undefined
-console.log(typeof true); //boolean
-console.log(typeof /ewwr/); //object
-console.log(typeof fn); //function
+&#x2022; apps:json&#x7ED3;&#x6784;&#xFF0C;apps&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x6210;&#x5458;&#x5C31;&#x662F;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;pm2&#x4E2D;&#x8FD0;&#x884C;&#x7684;&#x5E94;&#x7528;
+&#x2022; name:&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x540D;&#x79F0;
+&#x2022; cwd:&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;
+&#x2022; script:&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x811A;&#x672C;&#x8DEF;&#x5F84;
+&#x2022; log_date_format:
+&#x2022; error_file:&#x81EA;&#x5B9A;&#x4E49;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x9519;&#x8BEF;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;
+&#x2022; out_file:&#x81EA;&#x5B9A;&#x4E49;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;
+&#x2022; pid_file:&#x81EA;&#x5B9A;&#x4E49;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;pid&#x6587;&#x4EF6;
+&#x2022; instances: 1 &#x542F;&#x52A8;&#x7684;&#x5B9E;&#x4F8B;&#x6570;&#x91CF;
+&#x2022; min_uptime:&#x6700;&#x5C0F;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;&#x7684;&#x662F;60s&#x5373;&#x5982;&#x679C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5728;60s&#x5185;&#x9000;&#x51FA;&#xFF0C;pm2&#x4F1A;&#x8BA4;&#x4E3A;&#x7A0B;&#x5E8F;&#x5F02;&#x5E38;&#x9000;&#x51FA;&#xFF0C;&#x6B64;&#x65F6;&#x89E6;&#x53D1;&#x91CD;&#x542F;max_restarts&#x8BBE;&#x7F6E;&#x6570;&#x91CF;
+&#x2022; max_restarts:&#x8BBE;&#x7F6E;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5F02;&#x5E38;&#x9000;&#x51FA;&#x91CD;&#x542F;&#x7684;&#x6B21;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;15&#x6B21;&#xFF08;&#x4ECE;0&#x5F00;&#x59CB;&#x8BA1;&#x6570;&#xFF09;
+&#x2022; cron_restart:&#x5B9A;&#x65F6;&#x542F;&#x52A8;&#xFF0C;&#x89E3;&#x51B3;&#x91CD;&#x542F;&#x80FD;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;
+&#x2022; watch:&#x662F;&#x5426;&#x542F;&#x7528;&#x76D1;&#x63A7;&#x6A21;&#x5F0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;false&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x6210;true&#xFF0C;&#x5F53;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D8;&#x52A8;&#x65F6;&#xFF0C;pm2&#x4F1A;&#x81EA;&#x52A8;&#x91CD;&#x8F7D;&#x3002;&#x8FD9;&#x91CC;&#x4E5F;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4F60;&#x8981;&#x76D1;&#x63A7;&#x7684;&#x6587;&#x4EF6;&#x3002;
+&#x2022; merge_logs:
+&#x2022; exec_interpreter:&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x811A;&#x672C;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x7684;shell&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;nodejs
+&#x2022; exec_mode:&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x6A21;&#x5F0F;&#xFF0C;&#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;&#x7684;&#x662F;cluster_mode&#xFF08;&#x96C6;&#x7FA4;&#xFF09;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;fork
+&#x2022; autorestart:&#x542F;&#x7528;/&#x7981;&#x7528;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5D29;&#x6E83;&#x6216;&#x9000;&#x51FA;&#x65F6;&#x81EA;&#x52A8;&#x91CD;&#x542F;
+&#x2022; vizion:&#x542F;&#x7528;/&#x7981;&#x7528;vizion&#x7279;&#x6027;(&#x7248;&#x672C;&#x63A7;&#x5236;)
 
-console.log(&quot;&quot; instanceof String); //false
-console.log({} instanceof Object); //true
-console.log(number instanceof Number); //false
-console.log([] instanceof Array); //true
-console.log(true instanceof Boolean); //false
-console.log(/werew/ instanceof RegExp); //true
-console.log(fn instanceof Function); //true
+&#x6267;&#x884C; pm2 start ecosystem.config.js --env production
+&#x8FD9;&#x65F6;&#x5019; process.env.PORT &#x5C31;&#x662F; 80 &#x4E86;
+--env &#x53C2;&#x6570;&#x7528;&#x6765;&#x533A;&#x5206;&#x4E0D;&#x540C;&#x73AF;&#x5883;
 
-console.log(&quot;&quot;.constructor === String); //true
-console.log(number.constructor === Number); //true
-console.log({}.constructor === Object); //true
-console.log([].constructor === Array); //true
-console.log(true.constructor === Boolean); //true
-console.log(/qew/.constructor === RegExp); //true
-console.log(fn.constructor === Function); //true 
+app.js&#x4E2D;&#x5C31;&#x53EF;&#x4EE5;&#x53D6;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x503C;&#x4E86;
+const Koa = require(&quot;koa&quot;);
+const path = require(&quot;path&quot;);
+const bodyparser = require(&quot;koa-bodyparser&quot;);
+const Router = require(&quot;koa-router&quot;);
+const koaStatic = require(&quot;koa-static&quot;);
 
-console.log(Object.prototype.toString.call(&quot;&quot;)); //[object String]
-console.log(Object.prototype.toString.call([])); //[object Array]
-console.log(Object.prototype.toString.call({})); //[object Object]
-console.log(Object.prototype.toString.call(1233)); //[object Number]
-console.log(Object.prototype.toString.call(true)); //[object Boolean]
-console.log(Object.prototype.toString.call(/we/)); //[object RegExp]
-console.log(Object.prototype.toString.call(null)); //[object Null]
-console.log(Object.prototype.toString.call(undefined)); //[object Undefined]
-console.log(Object.prototype.toString.call(fn)); //[object Function]
+const app = new Koa();
+const router = new Router();
 
-console.log(Object.prototype.toString.call(&quot;&quot;) === &quot;[object String]&quot;); //true
-console.log(Object.prototype.toString.call([]) === &quot;[object Array]&quot;); //true
-console.log(Object.prototype.toString.call({}) === &quot;[object Object]&quot;); //true
-console.log(Object.prototype.toString.call(1233) === &quot;[object Number]&quot;); //true
-console.log(Object.prototype.toString.call(true) === &quot;[object Boolean]&quot;); //true
-console.log(Object.prototype.toString.call(/we/) === &quot;[object RegExp]&quot;); //true
-console.log(Object.prototype.toString.call(null) === &quot;[object Null]&quot;); //true
-console.log(Object.prototype.toString.call(undefined) === &quot;[object Undefined]&quot;); //true
-console.log(Object.prototype.toString.call(fn) === &quot;[object Function]&quot;); //true
+const staticPath = process.env.STATIC_PATH;
+const port = process.env.PORT;
+
+app.use(bodyparser());
+
+app.use(router.routes()).
+    use(router.allowedMethods());
+
+app.use(koaStatic(path.join(__dirname, staticPath)));
+
+app.listen(port, () =&gt; {
+
+    console.log(&quot;[Koa2] start-quick is starting at port &quot; + port);
+
+});
 </code></pre>
                                 
                                 </section>
@@ -483,12 +518,12 @@ console.log(Object.prototype.toString.call(fn) === &quot;[object Function]&quot;
 
             
                 
-                <a href="加减乘除.html" class="navigation navigation-prev " aria-label="Previous page: 加减乘除">
+                <a href="linux常用命令.html" class="navigation navigation-prev " aria-label="Previous page: linux常用命令">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="动态创建form表单下载.html" class="navigation navigation-next " aria-label="Next page: 动态创建form表单下载">
+                <a href="遮罩引导/遮罩引导.html" class="navigation navigation-next " aria-label="Next page: 遮罩引导">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -499,7 +534,7 @@ console.log(Object.prototype.toString.call(fn) === &quot;[object Function]&quot;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"js数据类型和判断方法","level":"1.12","depth":1,"next":{"title":"动态创建form表单下载","level":"1.13","depth":1,"path":"book/动态创建form表单下载.md","ref":"book/动态创建form表单下载.md","articles":[]},"previous":{"title":"加减乘除","level":"1.11","depth":1,"path":"book/加减乘除.md","ref":"book/加减乘除.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/js数据类型和判断方法.md","mtime":"2019-05-28T06:45:10.865Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-30T09:18:35.862Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"pm2配置及常用命令","level":"1.19","depth":1,"next":{"title":"遮罩引导","level":"1.20","depth":1,"path":"book/遮罩引导/遮罩引导.md","ref":"book/遮罩引导/遮罩引导.md","articles":[]},"previous":{"title":"linux常用命令","level":"1.18","depth":1,"path":"book/linux常用命令.md","ref":"book/linux常用命令.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/pm2配置及常用命令.md","mtime":"2019-05-29T10:32:59.140Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-30T09:18:35.862Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
