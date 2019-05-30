@@ -20,3 +20,4 @@
 * [linux常用命令](book/linux常用命令.md)
 * [pm2配置及常用命令](book/pm2配置及常用命令.md)
 * [遮罩引导](book/遮罩引导/遮罩引导.md)
+* [npm login报错](book/npm login报错.md)
