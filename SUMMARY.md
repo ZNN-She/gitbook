@@ -22,4 +22,4 @@
 * [遮罩引导](book/遮罩引导/遮罩引导.md)
 * [npm login报错](book/npm login报错.md)
 * [js深copy](book/js深copy.md)
-* [css3d魔方](demo/css3d)
+* [css3d魔方](book/css3d魔方.md)
