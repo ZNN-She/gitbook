@@ -1,4 +1,5 @@
 ```
+
 const getCookie = (name) => {
     if (name != null) {
         var value = new RegExp("(?:^|; )" + encodeURIComponent(String(name)) + "=([^;]*)").exec(document.cookie);
