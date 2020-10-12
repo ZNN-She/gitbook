@@ -17,7 +17,7 @@
     yarn add react react-dom 
     yarn add @babel/preset-react -D 
     修改babel-loader配置
-    ```angular2html
+    ```
 
       {
         test: /\.js$/,
@@ -147,7 +147,7 @@
     ```
 
 * mini-css-extract-plugin 提取生成css文件，加contenthash  
-    ```js
+    ```
     const MiniCssExtractPlugin = require('mini-css-extract-plugin');
     
       {
@@ -170,7 +170,7 @@
     
 * optimize-css-assets-webpack-plugin 压缩css 
 
-    ```js
+    ```
     const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
     new OptimizeCssAssetsPlugin({
           assetNameRegExp: /\.optimize\.css$/g,
@@ -195,7 +195,7 @@
   es6 动态import 需要babel转换  
 
 * eslint-loader babel-eslint
-  ```js
+  ```
   // .eslintrc.js 配置文件
   {
     test: /.js$/,
@@ -207,7 +207,7 @@
   ```
 
 * 打包npm包 支持 nmd cmd cjs script  打包出.min.js  
-  ```js
+  ```
   const TerserPulugin = require('terser-webpack-plugin');
 
   {
@@ -276,7 +276,7 @@
     
 * git commit 规范（angularjs的规范）；changelog规范  
     commit： husky、validate-commit-msg 怎么结合到webstorm上？？？  
-    ```js
+    ```
        
       "script":{
           "commitmsg": "validate-commit-msg",
